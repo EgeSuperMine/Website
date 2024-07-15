@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - EgeSuperMine</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem 2rem;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+
+
+    /* Hero Section */
+.hero {
+  background: url('../images/your-image.png') no-repeat center center/cover;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero-text h2 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .hero-text p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+    }
+
+
+    /* Projects Section */
+    .projects-section {
+      max-width: 1200px;
+      margin: 6rem auto 2rem;
+      padding: 2rem;
+      background: #444;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+    }
+
+    .search-bar {
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    .search-bar input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s, border-radius 0.3s;
+}
+
+.search-bar input:focus {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00ff2a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 15px;
+}
+
+
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      border: 1px solid #747474;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .project:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-content {
+      padding: 1rem;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+      color: #ffffff;
+    }
+
+    .project-content p {
+      font-size: 1em;
+      color: #b9b9b9;
+      line-height: 1.5;
+    }
+
+    .project-content a {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1em;
+      color: #00ff2a;
+      text-decoration: none;
+      border: 2px solid #00ff2a;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .project-content a:hover {
+      background-color: #00ff2a;
+      color: #ffffff;
+      border: 2px solid #00ff2a;
+      border-radius: 5px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.9);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+
+    .project {
+      animation: scaleUp 0.5s ease;
+    }
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .search-bar input {
+        width: 90%;
+      }
+
+      .project {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <h1>EgeSuperMine</h1>
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-text">
+      <h2>My Projects</h2>
+      <p>Check out the projects I've been working on. Each one reflects my passion and creativity as a solo developer.</p>
+    </div>
+  </div>
+  
+  <div class="projects-section">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search projects...">
+    </div>
+
+    <div id="projectsContainer">
+      <div class="project">
+        <img src="https://via.placeholder.com/1200x600" alt="Project 1">
+        <div class="project-content">
+          <h3>Raise an EgeSuperMine</h3>
+          <p>BETA 1.1.1 - Explore this exciting new game where you can raise and manage your own EgeSuperMine. Engage in various activities and enjoy the immersive gameplay.</p>
+          <a href="https://github.com/EgeSuperMine/Raise_an_EgeSuperMine" target="_blank">Learn More</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/1200x600" alt="Project 2">
+        <div class="project-content">
+          <h3>Pet EgeSuperMine</h3>
+          <p>1.7 - Take care of your own EgeSuperMine pets in this interactive and fun game. Discover new features and challenges as you progress through the game.</p>
+          <a href="https://github.com/EgeSuperMine/Pet-EgeSuperMine" target="_blank">Learn More</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/1200x600" alt="Project 3">
+        <div class="project-content">
+          <h3>EgeSupX</h3>
+          <p>1.1.2 - A cutting-edge project with innovative features and a dynamic interface. Perfect for those looking for a new experience.</p>
+          <a href="https://github.com/EgeSuperMine/EgeSupX" target="_blank">Learn More</a>
+        </div>
+      </div>
+
+      <div class="project">
+        <img src="https://via.placeholder.com/1200x600" alt="Project 4">
+        <div class="project-content">
+          <h3>EgeSuperMine's RPG</h3>
+          <p>In Development - Dive into our RPG game currently under development. Stay tuned for updates and new features!</p>
+          <a href="https://github.com/EgeSuperMine/ESMs_RPG" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 EgeSuperMine</p>
+  </footer>
+
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const searchValue = this.value.toLowerCase();
+      const projects = document.querySelectorAll('.project');
+
+      projects.forEach(project => {
+        const title = project.querySelector('h3').textContent.toLowerCase();
+        const description = project.querySelector('p').textContent.toLowerCase();
+        if (title.includes(searchValue) || description.includes(searchValue)) {
+      project.classList.remove('hidden');
+    } else {
+      project.classList.add('hidden');
+    }
+  });
+});
+</script>
+</body>
+</html>
